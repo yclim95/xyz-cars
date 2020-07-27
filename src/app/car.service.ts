@@ -13,13 +13,13 @@ export class CarService {
 
   // Cars On Sale Screen
   getCars(): Observable<Car[]> {
-    // TODO: send the message _after_ fetching the heroes
+    // Return CARS
     return of(CARS);
   }
 
 
   getCar(id: number): Observable<Car> {
-    // TODO: send the message _after_ fetching the hero
+    // rETURN Car
     return of(CARS.find(car => car.id === id));
   }
 }
