@@ -1,1 +1,9 @@
-<p>car-detail works!</p>
+<div *ngIf="car">
+  <h2>{{car.model | uppercase}} Details</h2>
+  <p><span>ID: </span>{{car.id}}</p>
+  <p><span>Year: </span>{{car.year}}</p>
+  <p><span>Description: </span>{{car.description}}</p>
+
+
+  <button (click)="goBack()">go back</button>
+</div>
