@@ -13,6 +13,9 @@ import { CarService } from '../car.service';
 export class CarDetailComponent implements OnInit {
 
   car: Car;
+  message: string;
+  selectedCar: Car;
+
 
   constructor(
     private route: ActivatedRoute,
@@ -30,6 +33,13 @@ export class CarDetailComponent implements OnInit {
     this.carService.getCar(id)
       .subscribe(car => this.car = car);
   }
+
+  // Show message once user subscribe to that car
+  onSelect(car: Car): void {
+    this.selectedCar = car;
+    this.message = `Subscribed to Car Update: Selected car id: ${car.id}, car model: ${car.model} of year ${car.year}`;
+  }
+
 
   // Return back to previous location
   goBack(): void {

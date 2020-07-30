@@ -6,4 +6,11 @@
 
 
   <button (click)="goBack()">go back</button>
+  <button (click)="onSelect(car)" class="subscribe">Subscribe</button>
+
+
+  <div *ngIf="message">
+    <h2>Messages</h2>
+    <p>{{message}}</p>
+  </div>
 </div>
